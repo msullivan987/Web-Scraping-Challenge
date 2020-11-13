@@ -55,7 +55,7 @@ def scrape():
 
     tables = pd.read_html(url)
     table_df = pd.DataFrame(tables[0])
-    table_html = table_df.to_html()
+    table_html = table_df.to_html(header=False, index=False)
 
     ###############################
     #DATA TABLE
